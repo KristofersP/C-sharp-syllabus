@@ -7,12 +7,12 @@ namespace Exercise8
     {
         static void Main(string[] args)
         {
-            payment((decimal)7.50, 35);
-            payment((decimal)8.20, 47);
-            payment((decimal)10.00, 73);
+            Payment((decimal)7.50, 35);
+            Payment((decimal)8.20, 47);
+            Payment((decimal)10.00, 73);
         }
 
-        public static void payment(decimal basePay, int hoursWorked)
+        public static void Payment(decimal basePay, int hoursWorked)
         {
             int bonusHours;
             decimal salary;

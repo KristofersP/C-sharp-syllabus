@@ -9,7 +9,6 @@ namespace Exercise5
             int counter = 0;
             int num;
            
-
             for (int i = 1; i < 111; i++)
             {
                 num = i;
