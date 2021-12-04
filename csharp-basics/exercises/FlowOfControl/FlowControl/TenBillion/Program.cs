@@ -73,7 +73,6 @@ namespace TenBillion
             }
 
             Console.ReadKey();
-           
         }
     }
 }

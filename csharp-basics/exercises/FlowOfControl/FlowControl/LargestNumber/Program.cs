@@ -29,7 +29,6 @@ namespace LargestNumber
             }
 
             Console.ReadKey();
-            
         }
     }
 }

@@ -23,7 +23,6 @@ namespace PositiveNegativeNumber
             }
 
             Console.ReadKey();
-            
         }
     }
 }
