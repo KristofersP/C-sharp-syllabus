@@ -9,59 +9,57 @@ namespace TenBillion
         {
             Console.WriteLine("Input an integer number less than ten billion: ");
 
-            var input = Console.ReadLine();
-
-            /*
-            todo - check if Long
-            if (?) 
+            var input = Convert.ToInt64(Console.ReadLine());
+            long n = input;
+           
+            
+            if (n is long) 
             {
-                //todo - check if n is less than zero
-                if (?) 
+                if (n < 0) 
                 {
                     n *= -1;
                 }
 
-                fixme
-                if (?) 
+                if (n >= 10000000000) 
                 {
                     Console.WriteLine("Number is greater or equals 10,000,000,000!");
                 } 
                 else 
                 {
                     int digits = 1;
-                    if (?) 
+                    if (n < 100) 
                     {
                         digits = 2;
                     } 
-                    else if (?) 
+                    else if (n < 1000) 
                     {
                         digits = 3;
                     } 
-                    else if (?) 
+                    else if (n < 10000) 
                     {
                         digits = 4;
                     } 
-                    else if (?) 
+                    else if (n < 100000) 
                     {
                         digits = 5;
                     } 
-                    else if (?) 
+                    else if (n < 1000000) 
                     {
                         digits = 6;
                     } 
-                    else if (?) 
+                    else if (n < 10000000) 
                     {
                         digits = 7;
                     } 
-                    else if (?) 
+                    else if (n < 100000000) 
                     {
                         digits = 8;
                     } 
-                    else if (?) 
+                    else if (n < 1000000000) 
                     {
                         digits = 9;
                     } 
-                    else if (?) 
+                    else if (n < 10000000000) 
                     {
                         digits = 10;
                     }
@@ -73,7 +71,9 @@ namespace TenBillion
             {
                 Console.WriteLine("The number is not a long");
             }
-            */
+
+            Console.ReadKey();
+           
         }
     }
 }
