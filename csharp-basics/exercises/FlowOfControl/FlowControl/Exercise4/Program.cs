@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Exercise4
+namespace PrintDayInWord
 {
     class Program
     {
