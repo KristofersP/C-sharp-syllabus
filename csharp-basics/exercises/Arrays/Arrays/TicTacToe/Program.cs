@@ -5,11 +5,20 @@ namespace TicTacToe
     class Program
     {
         private static char[,] board = new char[3, 3];
+        static bool gameOn = true;
+        static char move = 'X';
 
         private static void Main(string[] args)
         {
             InitBoard();
             DisplayBoard();
+            WhichTurn();
+            while (gameOn)
+            {
+                MakeTurn();
+                WhoWon();
+            }
+            Console.ReadKey();
         }
 
         private static void InitBoard()
@@ -19,8 +28,7 @@ namespace TicTacToe
             {
                 for (var c = 0; c < 3; c++)
                     board[r, c] = ' ';
-            }
-            
+            } 
         }
 
         private static void DisplayBoard()
@@ -31,6 +39,148 @@ namespace TicTacToe
             Console.WriteLine("    --+-+--");
             Console.WriteLine("  2  " + board[2, 0] + "|" + board[2, 1] + "|" + board[2, 2]);
             Console.WriteLine("    --+-+--");
+        }
+
+        public static void WhichTurn()
+        {
+            int countX = 0;
+            int countO = 0;
+            int countTurns = 0;
+
+            for (var r = 0; r < 3; r++)
+            {
+                for (var c = 0; c < 3; c++)
+                    if(board[r, c] == 'X')
+                    {
+                        countX++;
+                        countTurns++;
+                    }
+                    else if (board[r, c] == 'O')
+                    {
+                        countO++;
+                        countTurns++;
+                    }
+            }if(countTurns < 9) 
+            {
+                if (countX == countO)
+                {
+                    Console.WriteLine("X, make your turn.(row, column)");
+                    move = 'X';
+                }
+                else
+                {
+                    Console.WriteLine("O, make your turn.(row, column)");
+                    move = 'O';
+                }
+            }
+            else
+            {
+                gameOn = false;
+                Console.WriteLine("GAME OVER. ITS A TIE.");
+            } 
+        }
+
+        public static void MakeTurn()
+        {
+            int row = int.Parse(Console.ReadLine());
+            int column = int.Parse(Console.ReadLine());
+
+            if (board[row, column] == ' ')
+            {
+                board[row, column] = move;
+            }
+            else
+            {
+                Console.WriteLine("This field is already taken. Choose another field");
+            }
+
+            DisplayBoard();
+            WhichTurn();
+        }
+
+        public static void WhoWon()
+        {
+            if (board[0,0] == 'X' && board[0, 1] == 'X' && board[0, 2] == 'X')
+            {
+                Console.WriteLine("X WON! Congratulations!!!");
+                gameOn = false;
+            }
+            else if(board[1, 0] == 'X' && board[1, 1] == 'X' && board[1, 2] == 'X') 
+            {
+                Console.WriteLine("X WON! Congratulations!!!");
+                gameOn = false;
+            }
+            else if (board[2, 0] == 'X' && board[2, 1] == 'X' && board[2, 2] == 'X')
+            {
+                Console.WriteLine("X WON! Congratulations!!!");
+                gameOn = false;
+            }
+            else if (board[0, 0] == 'X' && board[1, 0] == 'X' && board[2, 0] == 'X')
+            {
+                Console.WriteLine("X WON! Congratulations!!!");
+                gameOn = false;
+            }
+            else if (board[0, 1] == 'X' && board[1, 1] == 'X' && board[2, 1] == 'X')
+            {
+                Console.WriteLine("X WON! Congratulations!!!");
+                gameOn = false;
+            }
+            else if (board[0, 2] == 'X' && board[1, 2] == 'X' && board[2, 2] == 'X')
+            {
+                Console.WriteLine("X WON! Congratulations!!!");
+                gameOn = false;
+            }
+            else if (board[0, 0] == 'X' && board[1, 1] == 'X' && board[2, 2] == 'X')
+            {
+                Console.WriteLine("X WON! Congratulations!!!");
+                gameOn = false;
+            }
+            else if (board[0, 2] == 'X' && board[1, 1] == 'X' && board[2, 0] == 'X')
+            {
+                Console.WriteLine("X WON! Congratulations!!!");
+                gameOn = false;
+            }
+
+            else if (board[1, 0] == 'O' && board[1, 1] == 'O' && board[1, 2] == 'O')
+            {
+                Console.WriteLine("O WON! Congratulations!!!");
+                gameOn = false;
+            }
+            else if (board[0, 0] == 'O' && board[0, 1] == 'O' && board[0, 2] == 'O')
+            {
+                Console.WriteLine("O WON! Congratulations!!!");
+                gameOn = false;
+            }
+            else if (board[2, 0] == 'O' && board[2, 1] == 'O' && board[2, 2] == 'O')
+            {
+                Console.WriteLine("O WON! Congratulations!!!");
+                gameOn = false;
+            }
+            else if (board[0, 0] == 'O' && board[1, 0] == 'O' && board[2, 0] == 'O')
+            {
+                Console.WriteLine("O WON! Congratulations!!!");
+                gameOn = false;
+            }
+            else if (board[0, 1] == 'O' && board[1, 1] == 'O' && board[2, 1] == 'O')
+            {
+                Console.WriteLine("O WON! Congratulations!!!");
+                gameOn = false;
+            }
+            else if (board[0, 2] == 'O' && board[1, 2] == 'O' && board[2, 2] == 'O')
+            {
+                Console.WriteLine("O WON! Congratulations!!!");
+                gameOn = false;
+            }
+            else if (board[0, 0] == 'O' && board[1, 1] == 'O' && board[2, 2] == 'O')
+            {
+                Console.WriteLine("O WON! Congratulations!!!");
+                gameOn = false;
+            }
+            else if (board[0, 2] == 'O' && board[1, 1] == 'O' && board[2, 0] == 'O')
+            {
+                Console.WriteLine("O WON! Congratulations!!!");
+                gameOn = false;
+            }
         }
     }
 }
