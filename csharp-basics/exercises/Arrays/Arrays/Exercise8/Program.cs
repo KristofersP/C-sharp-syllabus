@@ -44,6 +44,7 @@ namespace Hangman
                     misses += guess;
                     missesCount++;
                 }
+
                 if (missesCount == 5)
                 {
                     Console.WriteLine("GAME OVER. Too many wrong guesses.");

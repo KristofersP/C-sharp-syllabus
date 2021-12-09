@@ -16,7 +16,7 @@ namespace Exercise2
             int size = maxNumber - minNumber;
             int[] nums = new int[size + 1];
 
-            for (int i = 0; i < size + 1; i++) 
+            for (int i = 0; i <= size; i++) 
             {
                 nums[i] = minNumber;
                 minNumber++;
