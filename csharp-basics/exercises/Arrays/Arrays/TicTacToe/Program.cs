@@ -13,10 +13,11 @@ namespace TicTacToe
             InitBoard();
             DisplayBoard();
             WhichTurn();
+            MakeTurn();
             while (gameOn)
             {
-                MakeTurn();
                 WhoWon();
+                MakeTurn();
             }
             Console.ReadKey();
         }
@@ -60,7 +61,9 @@ namespace TicTacToe
                         countO++;
                         countTurns++;
                     }
-            }if(countTurns < 9) 
+            }
+            
+            if(gameOn) 
             {
                 if (countX == countO)
                 {
@@ -73,7 +76,8 @@ namespace TicTacToe
                     move = 'O';
                 }
             }
-            else
+
+            if(countTurns == 9)
             {
                 gameOn = false;
                 Console.WriteLine("GAME OVER. ITS A TIE.");
@@ -82,105 +86,68 @@ namespace TicTacToe
 
         public static void MakeTurn()
         {
-            int row = int.Parse(Console.ReadLine());
-            int column = int.Parse(Console.ReadLine());
-
-            if (board[row, column] == ' ')
+            if (gameOn)
             {
-                board[row, column] = move;
-            }
-            else
-            {
-                Console.WriteLine("This field is already taken. Choose another field");
-            }
+                int row = int.Parse(Console.ReadLine());
+                int column = int.Parse(Console.ReadLine());
 
-            DisplayBoard();
-            WhichTurn();
+                if (board[row, column] == ' ')
+                {
+                    board[row, column] = move;
+                }
+                else
+                {
+                    Console.WriteLine("This field is already taken. Choose another field");
+                }
+
+                DisplayBoard();
+            } 
         }
 
         public static void WhoWon()
         {
-            if (board[0,0] == 'X' && board[0, 1] == 'X' && board[0, 2] == 'X')
+            if(board[0, 0] == board[0, 1] && board[0, 1] == board[0, 2] && board[0, 2] == move)
             {
-                Console.WriteLine("X WON! Congratulations!!!");
+                Console.WriteLine($"{move} WON! Congratulations!!!");
                 gameOn = false;
             }
-            else if(board[1, 0] == 'X' && board[1, 1] == 'X' && board[1, 2] == 'X') 
+            else if (board[1, 0] == board[1, 1] && board[1, 1] == board[1, 2] && board[1, 2] == move)
             {
-                Console.WriteLine("X WON! Congratulations!!!");
+                Console.WriteLine($"{move} WON! Congratulations!!!");
                 gameOn = false;
             }
-            else if (board[2, 0] == 'X' && board[2, 1] == 'X' && board[2, 2] == 'X')
+            else if (board[2, 0] == board[2, 1] && board[2, 1] == board[2, 2] && board[2, 2] == move)
             {
-                Console.WriteLine("X WON! Congratulations!!!");
+                Console.WriteLine($"{move} WON! Congratulations!!!");
                 gameOn = false;
             }
-            else if (board[0, 0] == 'X' && board[1, 0] == 'X' && board[2, 0] == 'X')
+            else if (board[0, 0] == board[1, 0] && board[1, 0] == board[2, 0] && board[2, 0] == move)
             {
-                Console.WriteLine("X WON! Congratulations!!!");
+                Console.WriteLine($"{move} WON! Congratulations!!!");
                 gameOn = false;
             }
-            else if (board[0, 1] == 'X' && board[1, 1] == 'X' && board[2, 1] == 'X')
+            else if (board[0, 1] == board[1, 1] && board[1, 1] == board[2, 1] && board[2, 1] == move)
             {
-                Console.WriteLine("X WON! Congratulations!!!");
+                Console.WriteLine($"{move} WON! Congratulations!!!");
                 gameOn = false;
             }
-            else if (board[0, 2] == 'X' && board[1, 2] == 'X' && board[2, 2] == 'X')
+            else if (board[0, 2] == board[1, 2] && board[1, 2] == board[2, 2] && board[2, 2] == move)
             {
-                Console.WriteLine("X WON! Congratulations!!!");
+                Console.WriteLine($"{move} WON! Congratulations!!!");
                 gameOn = false;
             }
-            else if (board[0, 0] == 'X' && board[1, 1] == 'X' && board[2, 2] == 'X')
+            else if (board[0, 0] == board[1, 1] && board[1, 1] == board[2, 2] && board[2, 2] == move)
             {
-                Console.WriteLine("X WON! Congratulations!!!");
+                Console.WriteLine($"{move} WON! Congratulations!!!");
                 gameOn = false;
             }
-            else if (board[0, 2] == 'X' && board[1, 1] == 'X' && board[2, 0] == 'X')
+            else if (board[0, 2] == board[1, 1] && board[1, 1] == board[2, 0] && board[2, 0] == move)
             {
-                Console.WriteLine("X WON! Congratulations!!!");
+                Console.WriteLine($"{move} WON! Congratulations!!!");
                 gameOn = false;
             }
 
-            else if (board[1, 0] == 'O' && board[1, 1] == 'O' && board[1, 2] == 'O')
-            {
-                Console.WriteLine("O WON! Congratulations!!!");
-                gameOn = false;
-            }
-            else if (board[0, 0] == 'O' && board[0, 1] == 'O' && board[0, 2] == 'O')
-            {
-                Console.WriteLine("O WON! Congratulations!!!");
-                gameOn = false;
-            }
-            else if (board[2, 0] == 'O' && board[2, 1] == 'O' && board[2, 2] == 'O')
-            {
-                Console.WriteLine("O WON! Congratulations!!!");
-                gameOn = false;
-            }
-            else if (board[0, 0] == 'O' && board[1, 0] == 'O' && board[2, 0] == 'O')
-            {
-                Console.WriteLine("O WON! Congratulations!!!");
-                gameOn = false;
-            }
-            else if (board[0, 1] == 'O' && board[1, 1] == 'O' && board[2, 1] == 'O')
-            {
-                Console.WriteLine("O WON! Congratulations!!!");
-                gameOn = false;
-            }
-            else if (board[0, 2] == 'O' && board[1, 2] == 'O' && board[2, 2] == 'O')
-            {
-                Console.WriteLine("O WON! Congratulations!!!");
-                gameOn = false;
-            }
-            else if (board[0, 0] == 'O' && board[1, 1] == 'O' && board[2, 2] == 'O')
-            {
-                Console.WriteLine("O WON! Congratulations!!!");
-                gameOn = false;
-            }
-            else if (board[0, 2] == 'O' && board[1, 1] == 'O' && board[2, 0] == 'O')
-            {
-                Console.WriteLine("O WON! Congratulations!!!");
-                gameOn = false;
-            }
+            WhichTurn();
         }
     }
 }
