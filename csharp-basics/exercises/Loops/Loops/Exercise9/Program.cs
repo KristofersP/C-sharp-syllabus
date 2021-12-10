@@ -4,7 +4,6 @@ namespace RollTwoDice
 {
     class Program
     {
-        //TODO: print all vowels using for and foreach
         static void Main(string[] args)
         {
             Console.WriteLine("Enter your desired sum(1 - 12):");
