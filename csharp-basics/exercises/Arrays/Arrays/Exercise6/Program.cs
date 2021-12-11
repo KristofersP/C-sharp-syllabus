@@ -4,7 +4,6 @@ namespace Exercise6
 {
     class Program
     {
-        //TODO: Write a C# program to find the index of an array element.
         private static void Main(string[] args)
         {
             int[] myArray1 = new int[10];
