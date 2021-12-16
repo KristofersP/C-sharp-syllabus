@@ -33,14 +33,7 @@ namespace VideoStore
 
         public double AverageRating()
         {
-            if(_rating != null)
-            {
-                return _rating.Average();
-            }
-            else
-            {
-                return 0;
-            }
+            return _rating.Average();
             
         }
 
