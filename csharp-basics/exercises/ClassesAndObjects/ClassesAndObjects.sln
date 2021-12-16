@@ -23,11 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise3_", "Exercise3_\Ex
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise4", "Exercise4\Exercise4.csproj", "{6F8AF202-AB25-4A75-80DC-757CDFBFBE2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise5", "Exercise5\Exercise5.csproj", "{65816CFC-FF39-413B-B0BC-E6BBBAF4C048}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise5", "Exercise5\Exercise5.csproj", "{65816CFC-FF39-413B-B0BC-E6BBBAF4C048}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogTest", "DogTest\DogTest.csproj", "{93F37DB7-98B6-4D80-9E26-F5C784806FCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DogTest", "DogTest\DogTest.csproj", "{93F37DB7-98B6-4D80-9E26-F5C784806FCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise8", "Exercise8\Exercise8.csproj", "{7ECF2C57-5108-4686-8588-AD14981FD8C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise8", "Exercise8\Exercise8.csproj", "{7ECF2C57-5108-4686-8588-AD14981FD8C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise9", "Exercise9\Exercise9.csproj", "{73E9B2CC-60BF-45D0-9D1C-75B5852A93D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{7ECF2C57-5108-4686-8588-AD14981FD8C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7ECF2C57-5108-4686-8588-AD14981FD8C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7ECF2C57-5108-4686-8588-AD14981FD8C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73E9B2CC-60BF-45D0-9D1C-75B5852A93D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73E9B2CC-60BF-45D0-9D1C-75B5852A93D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73E9B2CC-60BF-45D0-9D1C-75B5852A93D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73E9B2CC-60BF-45D0-9D1C-75B5852A93D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
