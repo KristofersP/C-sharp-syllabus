@@ -10,7 +10,31 @@ namespace WordCount
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string text = System.IO.File.ReadAllText("../../lear.txt");
+            int wordsum = 0;
+            int charsum = 0;
+            int numLines = text.Split('\n').Length;
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                if(text[i] == ' ' || text[i] == '\'')
+                {
+                    wordsum++;
+                }
+
+                charsum++;
+
+                if(text[i] == ',')
+                {
+                    charsum--;
+                }
+                
+            }
+
+            Console.WriteLine($"Words = {wordsum + 1}");
+            Console.WriteLine("Chars = " + charsum);
+            Console.WriteLine("Lines = " + numLines);
+            Console.ReadKey();
         }
     }
 }
