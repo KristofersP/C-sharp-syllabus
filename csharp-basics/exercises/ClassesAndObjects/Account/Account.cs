@@ -32,15 +32,15 @@
             set => _name = value;
         }
 
+        public decimal Money
+        {
+            get => _money;
+            set => _money = value;
+        }
+
         public override string ToString()
         {
             return $"{_name}: {_money}";
-        }
-
-        public static void Transfer(Account from, Account to, decimal howMuch)
-        {
-            from._money -= howMuch;
-            to._money += howMuch;
         }
     }
 }

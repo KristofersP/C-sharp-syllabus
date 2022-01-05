@@ -8,30 +8,30 @@ namespace Exercise1
 {
     class Product
     {
-        private double price;
-        private int amount;
-        private string name;
+        private double _price;
+        private int _amount;
+        private string _name;
         
         public Product(string name, double priceAtStart, int amountAtStart)
         {
-            this.name = name;
-            amount = amountAtStart;
-            price = priceAtStart;
+            _name = name;
+            _amount = amountAtStart;
+            _price = priceAtStart;
         }
 
         public void PrintProduct()
         {
-            Console.WriteLine($"{name}, price {price}, amount {amount}");
+            Console.WriteLine($"{_name}, price {_price}, amount {_amount}");
         }
 
         public void ChangeAmount(int amount)
         {
-            this.amount = amount; ;
+            _amount = amount; ;
         }
 
         public void ChangePrice(double price)
         {
-            this.price = price;
+            _price = price;
         }
 
     }

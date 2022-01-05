@@ -8,27 +8,27 @@ namespace Exercise7
 {
     public class Dog
     {
-        public string name;
-        public string sex;
-        public string father;
-        public string mother;
+        private string _name;
+        private string _sex;
+        private string _father;
+        private string _mother;
 
         public Dog(string name, string sex, string father, string mother)
         {
-            this.name = name;
-            this.sex = sex;
-            this.father = father;
-            this.mother = mother;
+            _name = name;
+            _sex = sex;
+            _father = father;
+            _mother = mother;
         }
 
         public string FathersName()
         {
-            return father == null ? "Unknown" : father;
+            return _father == null ? "Unknown" : _father;
         }
 
         public bool HasSameMotherAs(Dog otherDog)
         {
-            return mother == otherDog.mother;
+            return _mother == otherDog._mother;
         }
     }
 }

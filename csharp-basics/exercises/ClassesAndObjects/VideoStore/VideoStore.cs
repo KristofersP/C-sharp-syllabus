@@ -18,42 +18,32 @@ namespace VideoStore
         {
             _inventory.Add(new Video(title));
         }
-        
-        public void Checkout(string title)
+
+        public Video FindTitle(string title)
         {
             foreach (var item in _inventory)
             {
-                if(item.Title == title)
+                if (item.Title == title)
                 {
-                    item.BeingCheckedOut();
-                    break;
+                    return item;
                 }
             }
-
+            return null;
+        }
+        
+        public void Checkout(string title)
+        {
+            FindTitle(title).BeingCheckedOut();
         }
 
         public void ReturnVideo(string title)
         {
-            foreach (var item in _inventory)
-            {
-                if (item.Title == title)
-                {
-                    item.BeingReturned();
-                    break;
-                }
-            }
+            FindTitle(title).BeingReturned();
         }
 
         public void TakeUsersRating(double rating, string title)
         {
-            foreach (var item in _inventory)
-            {
-                if (item.Title == title)
-                {
-                    item.ReceivingRating(rating);
-                    break;
-                }
-            }
+            FindTitle(title).ReceivingRating(rating);
         }
 
         public void ListInventory()

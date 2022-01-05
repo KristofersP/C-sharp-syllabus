@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace Exercise7
 {
     class DogTest
-    {
-        
+    {  
         private static void Main(string[] args)
         {
             var max = new Dog("Max", "male", "Rocky", "Lady");
