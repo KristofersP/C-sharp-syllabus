@@ -26,15 +26,9 @@ namespace ListExercise11
             };
 
             colors.Insert(4, "Yellow");
-            
-            for(int i = 0; i < colors.Count(); i++)
-            {
-                if(i == colors.Count() - 1)
-                {
-                    colors.Insert(i, "Yellow");
-                    break;
-                }
-            }
+
+            colors.Insert(colors.Count() - 1, "Yellow");
+
             colors.Sort();
             
             for (int i = 0; i < colors.Count(); i++)

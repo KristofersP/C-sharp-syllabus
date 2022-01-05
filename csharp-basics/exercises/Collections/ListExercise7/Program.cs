@@ -19,12 +19,9 @@ namespace ListExercise7
                 "Black"
             };
 
-            for(int i = 0; i < colors.Count(); i++)
+            if (colors.Contains("White"))
             {
-                if(colors[i] == "White")
-                {
-                    Console.WriteLine("The list contains White");
-                }
+                Console.WriteLine("The list contains White");
             }
 
             Console.ReadKey();

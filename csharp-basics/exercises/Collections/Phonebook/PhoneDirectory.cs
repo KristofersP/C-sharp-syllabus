@@ -11,7 +11,8 @@ namespace PhoneBook
             _data = new SortedDictionary<string, string>();
         }
 
-        private string Find(string name) {
+        private string Find(string name) 
+        {
             foreach (KeyValuePair<string, string> pair in _data)
             {
                 if(pair.Key == name)
