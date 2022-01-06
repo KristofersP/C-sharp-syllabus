@@ -2,24 +2,25 @@
 
 namespace CheckOddEven
 {
-    class Programm
+    public class Programm
     {
+        private static int _number;
         static void Main()
         {
             Console.WriteLine("Enter a number");
-            int number = Convert.ToInt32(Console.ReadLine());
+            _number = Convert.ToInt32(Console.ReadLine());
+        }
 
+        public bool IsNumberEven(int number)
+        {
             if (number % 2 == 0)
             {
-                Console.WriteLine("Even Number");
+               return true;
             }
             else
             {
-                Console.WriteLine("Odd Number");
+                return false;
             }
-
-            Console.WriteLine("bye!");
-
         }
     }
 }
