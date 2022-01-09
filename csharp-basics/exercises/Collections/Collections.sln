@@ -49,6 +49,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordCount.Tests", "WordCoun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightPlanner.Tests", "FlightPlanner.Tests\FlightPlanner.Tests.csproj", "{F9B7CE1B-F58E-4D11-A22F-1EDB0A2D2606}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook.Tests", "PhoneBook.Tests\PhoneBook.Tests.csproj", "{D9F541ED-7A0D-4DCA-8306-8D986D285E29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -143,6 +145,10 @@ Global
 		{F9B7CE1B-F58E-4D11-A22F-1EDB0A2D2606}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9B7CE1B-F58E-4D11-A22F-1EDB0A2D2606}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9B7CE1B-F58E-4D11-A22F-1EDB0A2D2606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9F541ED-7A0D-4DCA-8306-8D986D285E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F541ED-7A0D-4DCA-8306-8D986D285E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9F541ED-7A0D-4DCA-8306-8D986D285E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F541ED-7A0D-4DCA-8306-8D986D285E29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

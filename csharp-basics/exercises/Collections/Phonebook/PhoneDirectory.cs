@@ -11,19 +11,6 @@ namespace PhoneBook
             _data = new SortedDictionary<string, string>();
         }
 
-        private string Find(string name) 
-        {
-            foreach (KeyValuePair<string, string> pair in _data)
-            {
-                if(pair.Key == name)
-                {
-                    return pair.Key;
-                }
-            }
-
-            return null;
-        }
-
         public string GetNumber(string name) 
         {
             foreach (KeyValuePair<string, string> pair in _data)
@@ -43,20 +30,14 @@ namespace PhoneBook
                 throw new Exception("name and number cannot be null");
             }
 
-            var i = Find(name);
-            foreach (KeyValuePair<string, string> pair in _data)
+            if (_data.ContainsKey(name))
             {
-                if (pair.Key == i)
-                {
-                    _data.Add(pair.Key, number);
-                }
-                else
-                {
-                    var newEntry = new PhoneEntry { name = name, number = number }; // Create a new pair.
-                    _data.Add(newEntry.name, newEntry.number);   // Add the new pair to the array.
-                }
+                _data[name] = number;
             }
-            
+            else
+            {
+                _data.Add(name, number);
+            }
         }
     }
 }

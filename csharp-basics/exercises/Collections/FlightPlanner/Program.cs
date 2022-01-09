@@ -48,13 +48,10 @@ namespace FlightPlanner
             while (_currentcity != _origincity);
 
             Console.ReadKey();
-
         }
 
         public Dictionary<string, List<string>> FillDictionary(List<string> readText)
         {
-           
-
             var flights = new Dictionary<string, List<string>>();
 
             foreach (var x in readText)
@@ -94,17 +91,17 @@ namespace FlightPlanner
         {
             _currentcity = currentcity;
                 
-                _trip.Add(_currentcity);
+            _trip.Add(_currentcity);
 
-                if (_currentcity == _origincity)
+            if (_currentcity == _origincity)
+            {
+                Console.WriteLine("Your trip summary:");
+
+                foreach (var item in _trip)
                 {
-                    Console.WriteLine("Your trip summary:");
-
-                    foreach (var item in _trip)
-                    {
-                        Console.WriteLine(item);
-                    }   
-                }
+                    Console.WriteLine(item);
+                }   
+            }
             else
             {
                 Console.WriteLine("These are the destinations from that city:");
