@@ -4,14 +4,14 @@ using System.Text;
 
 namespace Hierarchy
 {
-    internal class Zebra : Mammal
+    public class Zebra : Mammal
     {
         public Zebra(string animalName, string animalType, double animalWeight, int foodEaten, string livingRegion) : base(animalName, animalType, animalWeight, foodEaten, livingRegion)
         {
          
         }
 
-        public override void EatFood(Food food)
+        public override int EatFood(Food food)
         {
             if (food is Meat)
             {
@@ -22,11 +22,13 @@ namespace Hierarchy
             {
                 foodEaten = food.quantity;
             }
+
+            return foodEaten;
         }
 
-        public override void MakeSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("Brrrr!");
+            return "Brrrr!";
         }
 
         public override string ToString()

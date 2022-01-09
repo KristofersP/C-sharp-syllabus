@@ -11,7 +11,7 @@ namespace Hierarchy
             
         }
 
-        public override void EatFood(Food food)
+        public override int EatFood(Food food)
         {
             if (food is Meat)
             {
@@ -22,11 +22,13 @@ namespace Hierarchy
             {
                 foodEaten = food.quantity;
             }
+
+            return foodEaten;
         }
 
-        public override void MakeSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("Squeek!");
+            return "Squeek!";
         }
 
         public override string ToString()

@@ -22,9 +22,9 @@ namespace DragRace
             currentSpeed += 17;
         }
 
-        public void StartEngine()
+        public string StartEngine()
         {
-            Console.WriteLine("Pra....pra...pra..praparprapraparpra");
+            return "Pra....pra...pra..praparprapraparpra";
         }
     }
 }

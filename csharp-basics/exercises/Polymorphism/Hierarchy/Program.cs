@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Hierarchy
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -55,12 +55,10 @@ namespace Hierarchy
 
                 if (foodType == "Vegetable")
                 {
-                    // Vegetable vegetable = new Vegetable(foodQuantity);
                     food.Add(new Vegetable(foodQuantity));
                 }
                 else if (foodType == "Meat")
                 {
-                    // Vegetable vegetable = new Vegetable(foodQuantity);
                     food.Add(new Meat(foodQuantity));
                 }
 

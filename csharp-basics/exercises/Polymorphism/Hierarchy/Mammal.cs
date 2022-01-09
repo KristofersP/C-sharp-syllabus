@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hierarchy
 {
-    abstract class Mammal : Animal
+    public abstract class Mammal : Animal
     {
         public string livingRegion;
 
@@ -13,9 +13,6 @@ namespace Hierarchy
             this.livingRegion = livingRegion;
         }
 
-        public override void MakeSound()
-        {
-           
-        }
+        
     }
 }

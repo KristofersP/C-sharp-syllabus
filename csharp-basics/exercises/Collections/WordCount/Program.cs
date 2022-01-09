@@ -6,35 +6,56 @@ using System.Threading.Tasks;
 
 namespace WordCount
 {
-    class Program
+    public class Program
     {
+        
+        public static Program obj = new Program();
+
         static void Main(string[] args)
         {
             string text = System.IO.File.ReadAllText("../../lear.txt");
+            Console.WriteLine($"Words = {obj.WordCount(text)}");
+            Console.WriteLine("Chars = " + obj.CharCount(text));
+            Console.WriteLine("Lines = " + obj.LineCount(text));
+            Console.ReadKey();
+        }
+
+        public int WordCount(string text)
+        {
             int wordsum = 0;
-            int charsum = 0;
-            int numLines = text.Split('\n').Length;
 
             for (int i = 0; i < text.Length; i++)
             {
-                if(text[i] == ' ' || text[i] == '\'')
+                if (text[i] == ' ' || text[i] == '\'')
                 {
                     wordsum++;
                 }
+            }
 
+            return wordsum + 1;
+        }
+
+        public int CharCount(string text)
+        {
+
+            int charsum = 0;
+
+            for (int i = 0; i < text.Length; i++)
+            {
                 charsum++;
 
-                if(text[i] == ',')
+                if (text[i] == ',')
                 {
                     charsum--;
                 }
-                
             }
 
-            Console.WriteLine($"Words = {wordsum + 1}");
-            Console.WriteLine("Chars = " + charsum);
-            Console.WriteLine("Lines = " + numLines);
-            Console.ReadKey();
+            return charsum;
+        }
+
+        public int LineCount(string text)
+        {
+            return text.Split('\n').Length;
         }
     }
 }

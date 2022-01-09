@@ -12,7 +12,7 @@ namespace Exercise5
         {
             var date = new Date(-5, -1, -3);
 
-            date.DisplayDate();
+            Console.WriteLine(date.DisplayDate());
         }
     }
 }
