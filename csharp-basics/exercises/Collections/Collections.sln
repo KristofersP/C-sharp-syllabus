@@ -45,7 +45,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise4", "Exercise4\Exer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise9", "Exercise9\Exercise9.csproj", "{9E377E7A-826D-4053-BCC3-1B813FECEDCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCount.Tests", "WordCount.Tests\WordCount.Tests.csproj", "{47CBC05F-0FDC-4055-B948-9D7845508A70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordCount.Tests", "WordCount.Tests\WordCount.Tests.csproj", "{47CBC05F-0FDC-4055-B948-9D7845508A70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightPlanner.Tests", "FlightPlanner.Tests\FlightPlanner.Tests.csproj", "{F9B7CE1B-F58E-4D11-A22F-1EDB0A2D2606}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -137,6 +139,10 @@ Global
 		{47CBC05F-0FDC-4055-B948-9D7845508A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47CBC05F-0FDC-4055-B948-9D7845508A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47CBC05F-0FDC-4055-B948-9D7845508A70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9B7CE1B-F58E-4D11-A22F-1EDB0A2D2606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9B7CE1B-F58E-4D11-A22F-1EDB0A2D2606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9B7CE1B-F58E-4D11-A22F-1EDB0A2D2606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9B7CE1B-F58E-4D11-A22F-1EDB0A2D2606}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
