@@ -16,9 +16,10 @@
             return _money -= amount;
         }
 
-        public void Deposit(decimal amount)
+        public decimal Deposit(decimal amount)
         {
             _money += amount;
+            return _money;
         }
 
         public decimal Balance()

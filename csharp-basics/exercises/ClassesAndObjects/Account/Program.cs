@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace Account
 {
-    class Program
+    public class Program
     {
         private static void Main(string[] args)
         {
+            Program obj = new Program();
+
             Account A = new Account("A", 100.00m);
             Account B = new Account("B", 0.0m);
             Account C = new Account("C", 0.0m);
 
-            Transfer(A, B, 50.00m);
-            Transfer(B, C, 25.00m);
+            obj.Transfer(A, B, 50.00m);
+            obj.Transfer(B, C, 25.00m);
 
             Console.WriteLine(A.ToString());
             Console.WriteLine(B.ToString());
@@ -23,7 +25,7 @@ namespace Account
 
             Console.ReadKey();
         }
-        public static void Transfer(Account from, Account to, decimal howMuch)
+        public void Transfer(Account from, Account to, decimal howMuch)
         {
             from.Money -= howMuch;
             to.Money += howMuch;
