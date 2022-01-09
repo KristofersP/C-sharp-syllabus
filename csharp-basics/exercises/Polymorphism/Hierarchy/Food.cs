@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hierarchy
 {
-    abstract class Food
+    public abstract class Food
     {
         public int quantity;
 

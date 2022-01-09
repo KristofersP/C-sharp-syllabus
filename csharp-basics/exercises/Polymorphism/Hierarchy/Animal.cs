@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hierarchy
 {
-    abstract class Animal
+    public abstract class Animal
     {
         public string animalName;
         public string animalType;
@@ -19,10 +19,10 @@ namespace Hierarchy
             this.foodEaten = foodEaten;
         }
 
-        public abstract void MakeSound();
+        public abstract string MakeSound();
 
 
-        public abstract void EatFood(Food food);
+        public abstract int EatFood(Food food);
 
 
     }

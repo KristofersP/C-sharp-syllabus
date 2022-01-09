@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hierarchy
 {
-    internal class Meat : Food
+    public class Meat : Food
     {
         public Meat(int quantity) : base(quantity)
         {
