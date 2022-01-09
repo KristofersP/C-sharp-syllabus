@@ -24,9 +24,9 @@ namespace DragRace
 
 
 
-        public void StartEngine()
+        public string StartEngine()
         {
-            Console.WriteLine("BRRRRRRRRRRRRRRRRRRRRRRR");
+            return "BRRRRRRRRRRRRRRRRRRRRRRR";
         }
 
         public void UseNitrousOxideEngine()
